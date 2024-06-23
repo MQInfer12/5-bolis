@@ -1,5 +1,5 @@
 /* import { useState, useRef } from "react"; */
-import { Image, ImageSourcePropType, View } from "react-native";
+import { Image, ImageSourcePropType, StatusBar, View } from "react-native";
 import Graphics from "./graphics";
 import Navbar from "./navbar";
 import { useEffect, useState } from "react";
@@ -48,6 +48,7 @@ const App = () => {
   if (!loaded) return null;
   return (
     <View /* key={counter} */ style={{ flex: 1 }}>
+      <StatusBar barStyle="dark-content"  />
       <Navbar setBackground={setBackground} />
       <View
         style={{
